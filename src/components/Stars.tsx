@@ -3,7 +3,9 @@ import styles from './Stars.module.css'
 export default function Stars() {
     return (
         <div className={styles.container}>
-            {[...Array(30)].map((x, i) => {                
+            {[...Array(30)].map((x, i) => {   
+                console.log(x);
+                             
                 const topVal = Math.floor(Math.random() * 70);
                 const leftVal = Math.floor(Math.random() * 100);
 
