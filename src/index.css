@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Red Hat Text";
+  src: url("/font/RedHatText.woff2") format("woff2-variations");
+  font-weight: 100 1000;
+}
+
+:root {
+  --Grayish-blue: hsl(237, 18%, 59%);
+  --Soft-red: hsl(345, 95%, 68%);
+  --White: hsl(0, 0%, 100%);
+  --Dark-desaturated-blue: hsl(236, 21%, 26%);
+  --Very-dark-blue: hsl(235, 16%, 14%);
+  --Almost-black: hsl(234, 17%, 12%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  font-family: "Red Hat Text";
+  background: linear-gradient(#1d1e28 0%, #261c2d 95%, #261a2d 100%);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 25vh;
+  width: 100%;
+  background-image: url('./assets/pattern-hills.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  width: 100%;
+  margin-top: 21vh;
+  text-align: center;
+}
+
+main h1 {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 0.384rem;
+  color: var(--White);
+  margin-bottom: 8.1vh;
+}
+
+footer {
+  margin-top: auto;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  gap: 32px;
+}
+
+footer a:hover svg path {
+  fill: var(--Soft-red);
+}
+
+@media (min-width: 38rem) {
+  main {
+    margin-top: 18.5vh;
+  }
+  main h1 {
+    font-size: 1.375rem;
+    letter-spacing: 0.46875rem;
+    margin-bottom: 13vh;
+  }
+  footer {
+    margin-bottom: 9vh;
+  }
+}
