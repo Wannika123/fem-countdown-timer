@@ -40,7 +40,7 @@ Users should be able to:
 - vite
 - TypeScript
 - 3D CSS animation
-- I also generate the shimmering stars that appear randomly on the sky.
+- I also generate the shimmering stars that appear randomly in the sky.
 
 ### What I learned
 
