@@ -9,13 +9,17 @@ export function useCountdown() {
     let minutes = 0;
     let seconds = 0;
 
-    if (endTime) {
+    if (endTime && endTime > nowTime / 1000) {
         const timeRemaining = endTime - Math.floor(nowTime / 1000);
 
         days = Math.floor(timeRemaining / 24 / 60 / 60);
         hours = Math.floor(timeRemaining / 60 / 60) - (days * 24);
         minutes = Math.floor(timeRemaining / 60) - (days * 24 * 60) - (hours * 60);
         seconds = timeRemaining % 60;
+    }
+
+    if (endTime && endTime < nowTime / 1000) {
+        console.log('Hello developers, if you want the timer to start again, you can simply delete the local storage that has the key name of "end-time".')
     }
 
     useEffect(() => {
