@@ -3,47 +3,64 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 70vh;
+    height: 60vh;
 }
 
 .container > div {
     position: absolute;
+    translate: -50% -50%;   /* so that the top and left value will be the center of the star */
+    border-radius: 50%;
+}
+
+.static-star {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(149, 140, 180);
+    box-shadow: 0 0 6px 2px rgb(149, 140, 180);
+    cursor: pointer;
+}
+
+.static-star:focus-visible {
+    outline: 5px double var(--Soft-red);
 }
 
 .size-0 {
     width: 1.5px;
     height: 1.5px;
-    border-radius: 50%;
 }
 
 .size-1 {
     width: 2px;
     height: 2px;
-    border-radius: 50%;
 }
 
 .size-2 {
     width: 2.5px;
     height: 2.5px;
-    border-radius: 50%;
 }
 
 .color-0 {
-    background-color: hsl(224, 73%, 65%);
+    --c: hsl(224, 72%, 55%);
+ 
+    background-color: var(--c);
     animation-name: shimmering-0;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
 }
 
 .color-1 {
-    background-color: hsl(234, 83%, 69%);
+    --c: hsl(234, 73%, 57%);
+   
+    background-color: var(--c);
     animation-name: shimmering-1;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
 }
 
 .color-2 {
-    background-color: hsl(273, 74%, 70%);   
+    --c: hsl(273, 70%, 59%);
+ 
+    background-color: var(--c);
     animation-name: shimmering-2;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -55,11 +72,11 @@
     }
     40% {
         filter: brightness(200%);
-        box-shadow: 0 0 8px 2px hsl(220, 57%, 93%);
+        box-shadow: 0 0 8px 2px var(--c);
     }
     60% {
         filter: brightness(200%);
-        box-shadow: 0 0 8px 2px hsl(220, 57%, 93%);
+        box-shadow: 0 0 8px 2px var(--c);
     }
     100% {
         filter: drop-shadow(0);
@@ -72,11 +89,11 @@
     }
     40% {
         filter: brightness(200%);
-        box-shadow: 0 0 6px 2px hsl(250, 56%, 93%);
+        box-shadow: 0 0 6px 2px var(--c);
     }
     60% {
         filter: brightness(200%);
-        box-shadow: 0 0 6px 2px hsl(250, 56%, 93%);
+        box-shadow: 0 0 6px 2px var(--c);
     }
     100% {
         filter: drop-shadow(0);
@@ -89,11 +106,11 @@
     }
     40% {
         filter: brightness(200%);
-        box-shadow: 0 0 10px 2px hsl(281, 65%, 93%);
+        box-shadow: 0 0 10px 2px var(--c);
     }
     60% {
         filter: brightness(200%);
-        box-shadow: 0 0 10px 2px hsl(281, 65%, 93%);
+        box-shadow: 0 0 10px 2px var(--c);
     }
     100% {
         filter: drop-shadow(0);

@@ -1,0 +1,64 @@
+.travel-control {
+    position: absolute;
+    bottom: 8vh;
+    left: 50%;
+    translate: -50%;
+    animation: slide-up 0.5s;
+    text-align: center;
+}
+
+.selecting-wrapper h3 {
+    color: rgb(90, 90, 110);
+    margin-bottom: 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flex-container button {
+    padding: 6px 10px;
+    background-color: transparent;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.blue-btn {
+    border: 2px solid rgb(75, 80, 107);
+    color: rgb(84, 90, 120);
+}
+
+.blue-btn:hover, 
+.blue-btn:focus-visible {
+    background-color: rgb(75, 80, 107);
+}
+
+.orange-btn {
+    border: 2px solid rgb(102, 71, 85);
+    color: rgb(115, 81, 96);
+}
+
+.orange-btn:hover,
+.orange-btn:focus-visible {
+    background-color: rgb(102, 71, 85);
+}
+
+.flex-container button:hover, 
+.flex-container button:focus-visible {
+    cursor: pointer;
+    transition: all 0.3s;
+    color: rgb(200, 200, 200);
+}
+
+@keyframes slide-up {
+    0% {
+        translate: -50% 20px;
+        opacity: 0.4;
+    }
+    100% {
+        translate: -50%;
+        opacity: 1;
+    }
+}

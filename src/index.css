@@ -25,6 +25,10 @@ body {
   background: linear-gradient(#1d1e28 0%, #261c2d 95%, #261a2d 100%);
 }
 
+/* (29, 30, 40), (38, 28, 45), (38, 26, 45)  
+  hsl - (235, 28, 16), (275, 38, 18) 
+*/
+
 #root {
   width: 100%;
   min-height: 100vh;
@@ -48,6 +52,9 @@ main {
   width: 100%;
   margin-top: 21vh;
   text-align: center;
+  perspective: 700px;
+  position: relative;
+  z-index: 999;
 }
 
 main h1 {
@@ -56,6 +63,46 @@ main h1 {
   letter-spacing: 0.384rem;
   color: var(--White);
   margin-bottom: 8.1vh;
+}
+
+main.flip-in > h1, 
+main.flip-in > div {
+  animation: flipIn 0.7s;
+}
+
+main.flip-out > h1, 
+main.flip-out > div {
+  animation: flipOut 0.7s forwards;
+}
+
+.travel-btn {
+  position: absolute;
+  top: 65vh;
+  left: 50%;
+  translate: -50%;
+  border: 3px solid rgb(44, 47, 81);
+  background-color: transparent;
+  color: rgb(62, 67, 115);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 10%;
+}
+
+.travel-btn:hover, 
+.travel-btn:focus-visible {
+  cursor: pointer;
+  background-color: rgb(44, 47, 81);
+  color: var(--White);
+  transition: all 0.3s;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 footer {
@@ -82,5 +129,27 @@ footer a:hover svg path {
   }
   footer {
     margin-bottom: 9vh;
+  }
+}
+
+@keyframes flipIn {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOut {
+  0% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateX(90deg);
+    opacity: 0;
   }
 }

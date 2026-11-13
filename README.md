@@ -46,6 +46,7 @@ Users should be able to:
 
 - This project introduces me to 3D CSS, and I think building a website that has perspective is really interesting.
 - I also learned more about `Date` object, though I can't say I'm totally comfortable with it.
+- (update 13/11/2026) - Add space travel feature, using Dijkstra algorithm to find nearest path between 2 stars.
 
 ### Useful resources
 
